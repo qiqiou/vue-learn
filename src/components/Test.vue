@@ -2,23 +2,32 @@
   <div>
     <ul>
       <li>
-        <a href="/beforeCreate">beforeCreate</a>
+        <a href="javascript:void" @click="jump('beforeCreate')">beforeCreate</a>
       </li>
       <li>
-        <a href="/created">created</a>
+        <a href="javascript:void" @click="jump('created')">created</a>
       </li>
       <li>
-        <a href="/beforeMount">beforeMount</a>
+        <a href="javascript:void" @click="jump('beforeMount')">beforeMount</a>
       </li>
       <li>
-        <a href="/mounted">mounted</a>
+        <a href="javascript:void" @click="jump('mounted')">mounted</a>
       </li>
       <li>
-        <a href="/beforeUpdate">beforeUpdate and updated</a>
+        <a href="javascript:void" @click="jump('beforeUpdate')">beforeUpdate and updated</a>
       </li>
       <li>
-        <a href="/beforeDestroy">beforeDestroy and destroyed</a>
+        <a href="javascript:void" @click="jump('beforeDestroy')">beforeDestroy and destroyed</a>
       </li>
     </ul>
   </div>
 </template>
+<script>
+export default {
+  methods:{
+    jump(router){
+      this.$router.push(router);
+    }
+  }
+}
+</script>
